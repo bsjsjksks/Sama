@@ -1,0 +1,79 @@
+{
+    "name": "Source Banko",
+    "description": "خاص للمطور بنكو",
+    "logo": "https://te.legra.ph/file/46fa55b49b85c084159ce.jpg",
+    "keywords": [
+        "py-tgcalls",
+        "telegram bot",
+        "video stream",
+        "live stream",
+        "music stream",
+        "mongodb",
+        "pyrogram"
+    ],
+    "website": "https://t.me/m_uv09",
+    "repository": "https://github.com/hasan12g/RS",
+    "success_url": "https://t.me/m_uv6",
+    "env": {
+     "API_ID": {
+            "description": "اكتب ايبي ايدي",
+            "required": true,
+        },
+     "API_HASH": {
+            "description": "اكتب ايبي هاش",
+            "required": true,
+        },
+        "BOT_TOKEN": {
+            "description": "اكتب توكن",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "اكتب معرف البوت بدون @",
+            "required": true
+        },
+        "SESSION_NAME": {
+            "description": "اكتب كود ترمكس",
+            "required": true
+        },
+        "MONGODB_URL": {
+            "description": "اكتب قاعدة البيانات",
+            "required": true,
+            "value": "mongodb+srv://vro:vro@cluster0.eyy25.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        },
+        "SUDO_USERS": {
+            "description": "اكتب ايديات المطورين",
+            "required": true,
+        },
+        "OWNER_ID": {
+            "description": "اكتب ايدي مالك البوت",
+            "required": true,
+        },
+        "OWNER_USERNAME": {
+            "description": "اكتب معرف المطور بدون @",
+            "required": true,
+        },
+        "ALIVE_NAME": {
+            "description": "اكتب اسم المطور",
+            "required": true,
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
